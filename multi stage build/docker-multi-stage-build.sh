@@ -1,6 +1,8 @@
+# docker system prune -a
+
 git clone https://github.com/mrbilalshafiq/docker-java-app && cd docker-java-app
 vi Dockerfile
-#  # build from the Maven image which has a maven environment configured already
+# # build from the Maven image which has a maven environment configured already
 # FROM maven:latest
 
 # # copy our application in
@@ -31,4 +33,4 @@ curl localhost:8080
 curl ifconfig.me
 # docker stop spring-app
 # docker rm spring-app
-#  docker system prune -a
+# docker system prune -a
