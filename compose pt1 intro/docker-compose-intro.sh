@@ -9,7 +9,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/${version}/doc
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 mkdir docker-compose-nginx-tutorial && cd $_
-code docker-compose.yaml
+printf "version: "3.8"\nservices:\n nginx:\n   image: nginx:alpine\n   ports:\n   - target: 80\n     protocol: tcp" >> new_file.yaml
+# code docker-compose.yaml
 # version: "3.8"
 # services:
 #  nginx:
