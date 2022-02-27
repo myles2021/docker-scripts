@@ -2,7 +2,8 @@ mkdir dockerfile_exercises
 cd dockerfile_exercises
 touch Dockerfile
 ls
-code Dockerfile 
+printf 'FROM nginx:latest\nRUN printf "Myles the Docker Master" > /usr/share/nginx/html/index.html' >> Dockerfile
+# code Dockerfile 
 # FROM nginx:latest
 # RUN printf "Myles the Docker Master\n" > /usr/share/nginx/html/index.html
 docker build -t ournginx .
