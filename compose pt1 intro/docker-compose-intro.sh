@@ -26,7 +26,7 @@ VAR1="`docker inspect docker-compose-nginx-tutorial-nginx-1 | grep -Eo '(^|[ ,])
 VAR2="`docker inspect docker-compose-nginx-tutorial-nginx-2 | grep -Eo '(^|[ ,])"HostPort":[^,]*' | awk '{ $1=""; print}' | cut -c 3-7 | sed 's/"//g' | sort -u | sed -r '/^\s*$/d'`"
 VAR3="`docker inspect docker-compose-nginx-tutorial-nginx-3 | grep -Eo '(^|[ ,])"HostPort":[^,]*' | awk '{ $1=""; print}' | cut -c 3-7 | sed 's/"//g' | sort -u | sed -r '/^\s*$/d'`"
 
-curl localhost:(include port number from above)
+# curl localhost:(include port number from above)
 
 curl localhost:$VAR1
 curl localhost:$VAR2
